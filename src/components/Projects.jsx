@@ -26,7 +26,6 @@ const PhoneMockup = ({ children, className }) => (
   </div>
 );
 
-
 const Icon = ({ path, className }) => (
   <svg
     className={`absolute ${className} text-(--color-brand-red)`}
@@ -55,7 +54,6 @@ const Projects = () => {
 
   useGSAP(
     () => {
-
       gsap.to(".float-icon", {
         y: "random(-15, 15)",
         x: "random(-15, 15)",
@@ -73,7 +71,6 @@ const Projects = () => {
 
       if (!wrapper || !scrollContainer) return;
 
-
       const getScrollAmount = () => -(wrapper.scrollWidth - window.innerWidth);
 
       const scrollTween = gsap.to(wrapper, {
@@ -88,7 +85,6 @@ const Projects = () => {
           invalidateOnRefresh: true,
         },
       });
-
 
       const parallaxElements = gsap.utils.toArray(".parallax-layer");
       parallaxElements.forEach((el) => {
