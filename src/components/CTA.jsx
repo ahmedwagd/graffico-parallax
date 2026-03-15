@@ -1,6 +1,6 @@
-import React, { useRef } from "react";
-import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { useRef } from "react";
 
 const CTA = () => {
   const container = useRef();

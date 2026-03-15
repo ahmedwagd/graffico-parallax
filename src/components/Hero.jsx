@@ -1,9 +1,9 @@
-import React, { useRef } from "react";
-import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { useRef } from "react";
+import Confetti from "./Confetti";
 import ScrollIndicator from "./ScrollIndicator";
 import Stats from "./Stats";
-import Confetti from "./Confetti";
 
 const Hero = () => {
   const container = useRef();

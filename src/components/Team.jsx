@@ -105,7 +105,7 @@ const Team = () => {
 
         <div className="team-diagram-wrapper relative w-full h-100 md:h-125 flex items-center justify-center z-10 pl-8 lg:pl-0">
           <svg
-            className="absolute inset-0 w-full h-full pointer-events-none z-0"
+            className="absolute inset-20 w-full h-full pointer-events-none z-0"
             preserveAspectRatio="none"
           >
             <line
@@ -131,35 +131,35 @@ const Team = () => {
             />
           </svg>
 
-          <div className="absolute top-[35%] left-[25%] -translate-x-1/2 -translate-y-1/2 team-node scale-0 opacity-0 flex flex-col items-center gap-4 cursor-pointer hover:scale-110! transition-transform duration-300">
-            <div className="w-24 h-24 md:w-32 md:h-32 rounded-full border-4 border-[#2A2A2A] bg-black overflow-hidden shadow-2xl relative">
+          <div className="absolute top-[35%] left-[25%] -translate-x-1/2 -translate-y-1/2 team-node scale-0 opacity-0 flex flex-col items-center gap-4 cursor-pointer hover:scale-110! transition-transform duration-300 z-10">
+            <div className="w-24 h-24 md:w-32 md:h-32 rounded-full border-2 border-[#555] p-1 md:p-1.5 bg-[#101011]">
               <img
                 src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&q=80&w=200"
                 alt="Lorenzo"
-                className="w-full h-full object-cover grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                className="w-full h-full object-cover rounded-full"
               />
             </div>
-            <span className="text-xs md:text-sm font-bold tracking-widest uppercase text-white shadow-black drop-shadow-md">
+            <span className="text-sm md:text-base font-sans font-medium text-[#E8DAD0]">
               Lorenzo
             </span>
           </div>
 
-          <div className="absolute top-[35%] left-[75%] -translate-x-1/2 -translate-y-1/2 team-node scale-0 opacity-0 flex flex-col items-center gap-4 cursor-pointer hover:scale-110! transition-transform duration-300">
-            <div className="w-24 h-24 md:w-32 md:h-32 rounded-full border-4 border-[#2A2A2A] bg-black overflow-hidden shadow-2xl relative">
+          <div className="absolute top-[35%] left-[75%] -translate-x-1/2 -translate-y-1/2 team-node scale-0 opacity-0 flex flex-col items-center gap-4 cursor-pointer hover:scale-110! transition-transform duration-300 z-10">
+            <div className="w-24 h-24 md:w-32 md:h-32 rounded-full border-2 border-[#555] p-1 md:p-1.5 bg-[#101011]">
               <img
-                src="https://images.unsplash.com/photo-1543610892-0b1f7e6d8c1c?auto=format&fit=crop&q=80&w=200"
-                alt="Andrea"
-                className="w-full h-full object-cover grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?auto=format&fit=crop&q=80&w=200"
+                alt="Lorenzo"
+                className="w-full h-full object-cover rounded-full"
               />
             </div>
-            <span className="text-xs md:text-sm font-bold tracking-widest uppercase text-white shadow-black drop-shadow-md">
+            <span className="text-sm md:text-base font-sans font-medium text-[#E8DAD0]">
               Andrea
             </span>
           </div>
 
-          <div className="absolute top-[70%] left-1/2 -translate-x-1/2 -translate-y-1/2 team-node scale-0 opacity-0 z-20">
-            <div className="px-10 py-4 bg-[#C24128] rounded-full shadow-[0_10px_30px_rgba(194,65,40,0.4)] cursor-pointer hover:bg-(--color-brand-red) transition-colors">
-              <span className="font-shrikhand text-2xl md:text-3xl italic text-white tracking-widest">
+          <div className="absolute bottom-0 left-[65%] -translate-x-1/2 -translate-y-1/2 team-node scale-0 opacity-0 z-20">
+            <div className="px-10 py-3 bg-[#c24128] rounded-full cursor-pointer hover:bg-(--color-brand-red) transition-colors">
+              <span className="font-shrikhand text-2xl md:text-3xl italic text-[#E8DAD0] tracking-wider">
                 Team
               </span>
             </div>
