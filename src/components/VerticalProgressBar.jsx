@@ -1,7 +1,5 @@
-import React from "react";
-import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { gsap } from "../lib/gsap";
 
 const VerticalProgressBar = () => {
   useGSAP(() => {
@@ -15,11 +13,14 @@ const VerticalProgressBar = () => {
         scrub: 0.1,
       },
     });
-  }, []);
+  });
 
   return (
-    <div className="fixed right-0 top-1/2 -translate-y-1/2 h-[60vh] w-1 hidden md:flex flex-col items-center z-50 mr-4 lg:mr-8 bg-[rgba(233,77,47,0.2)] rounded-full overflow-hidden">
-      <div className="progress-fill w-full bg-(--color-brand-red) h-0 rounded-full"></div>
+    <div
+      aria-hidden
+      className="fixed right-0 top-1/2 -translate-y-1/2 h-[60vh] w-1 hidden md:flex flex-col items-center z-50 mr-4 lg:mr-8 bg-[rgba(233,77,47,0.2)] rounded-full overflow-hidden"
+    >
+      <div className="progress-fill w-full bg-(--color-brand-red) h-0 rounded-full" />
     </div>
   );
 };

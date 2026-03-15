@@ -1,5 +1,3 @@
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "lenis";
 import { useEffect, useState } from "react";
 
@@ -13,8 +11,7 @@ import Projects from "./components/Projects";
 import ScaleSection from "./components/ScaleSection";
 import Team from "./components/Team";
 import VerticalProgressBar from "./components/VerticalProgressBar";
-
-gsap.registerPlugin(ScrollTrigger);
+import { connectLenis } from "./lib/gsap";
 
 function App() {
   const [loadingComplete, setLoadingComplete] = useState(false);
@@ -28,20 +25,9 @@ function App() {
     });
 
     window.lenis = lenis;
+    loadingComplete ? lenis.start() : lenis.stop();
 
-    if (!loadingComplete) {
-      lenis.stop();
-    } else {
-      lenis.start();
-    }
-
-    lenis.on("scroll", ScrollTrigger.update);
-
-    gsap.ticker.add((time) => {
-      lenis.raf(time * 1000);
-    });
-
-    gsap.ticker.lagSmoothing(0, 0);
+    connectLenis(lenis);
 
     return () => {
       window.lenis = null;
@@ -57,7 +43,6 @@ function App() {
       <Navbar />
       <Hero />
       <VerticalProgressBar />
-
       <ScaleSection />
       <DigitalSolutions />
       <MoreSpecific />

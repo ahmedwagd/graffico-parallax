@@ -1,6 +1,5 @@
-import React from "react";
-import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { gsap } from "../lib/gsap";
 
 const ScrollIndicator = () => {
   useGSAP(() => {
@@ -11,14 +10,16 @@ const ScrollIndicator = () => {
       ease: "power1.inOut",
       repeat: -1,
     });
-  }, []);
+  });
 
   return (
-    <div className="flex flex-col items-center z-20 pointer-events-none">
+    <div
+      className="flex flex-col items-center z-20 pointer-events-none"
+      aria-hidden
+    >
       <span className="text-white uppercase font-sans font-semibold text-[0.85rem] tracking-[0.12em] mb-4">
         SCROLL TO DISCOVER
       </span>
-
       <svg
         width="24"
         height="36"
